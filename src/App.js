@@ -5,23 +5,41 @@ import Search from './components/Search/search';
 import Results from './components/Results/results';
 import Breadcrumbs from './components/Breadcrums/breadcrumbs';
 import Home from './components/Home/home';
+import Detail from './components/Detail/detailView';
 
-class App extends Component {
+class Index extends Component {
   render() {
     return (
-      <Router>
       <div className="App">
         <section className="header">
-            <Search></Search>
+          <Search />
         </section>
-        <Switch>
-          <Route exact path='/' component={Home}></Route>
-          <Route render={()=><p>No he encontré la página</p>}></Route>
-        </Switch>
-      <section className="footer"></section>
-    </div>
-  </Router>);
+        <Home></Home>
+        <section className="footer" />
+      </div>
+    );
   }
 }
 
-export default App;
+function Topic({ match }) {
+  return (<>
+    <h3>params: {match.params.id}</h3>
+    <Detail prodId={match.params.id}></Detail>
+  < />);
+}
+
+function AppRouter() {
+  return (
+    <Router>
+    <div className="App">
+        <section className="header">
+          <Search />
+        </section>
+        <Route path="/" exact component={Home} />
+        <Route path="/details/:id" component={Topic} />
+      </div>
+    </Router>
+  );
+}
+
+export default AppRouter;
