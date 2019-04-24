@@ -1,0 +1,88 @@
+body {
+  background-color: #eee!important;
+  section.header {
+    background-color: #ffe600;
+
+    .search {
+      padding: 0.5em 0;
+
+      img {
+        height: 34px;
+      }
+
+      .nav-search {
+        position: relative;
+
+        input {
+          border-right: 0;
+          color: #999;
+          font-size: 18px;
+        }
+
+        button {
+          background-color: #eee;
+          background-clip: padding-box;
+          border: 1px solid #ced4da;
+          border-radius: 0 0.25rem 0.25rem 0;
+          border-left: 0;
+
+          img {
+            height: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  section.content {
+    .breadcrumbs{
+      p{
+        padding: 14px 0;
+        margin: 0;
+      }
+    }
+    .item{
+      padding: 16px;
+      .image,.data,.city{
+        padding: 0;
+      }
+      .image{
+        padding: 0 16px;
+      }
+
+
+      img{
+        height: 100%;
+        width: 100%;
+        border-radius: 4px;
+      }
+      p{
+        padding: 0;
+        margin: 0;
+        &.price{
+          padding-bottom: 32px;
+          font-size: 24px;
+        }
+        &.description{
+          font-size: 18px;
+        }
+        &.location{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  section.footer {}
+}
+
+:focus {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+input:focus, button:focus{
+  border-color: transparent!important;
+  box-shadow: none!important;
+}
+.bgWhite{
+  background-color: white;
+}
