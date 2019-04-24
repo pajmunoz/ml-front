@@ -11,7 +11,7 @@ class ResultsItem extends Component {
     };
     return (
       <Link to={`/details/${this.props.id}`}>
-        <div className={style.item} style={{ cursor: "pointer" }}>
+        <div className={style.item}>
           <div className={style.row}>
             <div className="col-2 image">
               <img src={this.props.thumbnail} alt="" />

@@ -14,6 +14,7 @@ class Index extends Component {
         <section className="header">
           <Search />
         </section>
+        <Breadcrumbs></Breadcrumbs>
         <Home></Home>
         <section className="footer" />
       </div>
@@ -23,7 +24,7 @@ class Index extends Component {
 
 function Topic({ match }) {
   return (<>
-    <h3>params: {match.params.id}</h3>
+    <Breadcrumbs></Breadcrumbs>
     <Detail prodId={match.params.id}></Detail>
   < />);
 }

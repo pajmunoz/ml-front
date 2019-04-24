@@ -1,5 +1,6 @@
 body {
   background-color: #eee!important;
+
   section.header {
     background-color: #ffe600;
 
@@ -35,54 +36,87 @@ body {
   }
 
   section.content {
-    .breadcrumbs{
-      p{
+    .breadcrumbs {
+      p {
         padding: 14px 0;
         margin: 0;
       }
     }
-    .item{
+
+    .item {
+      transition: all .2s ease-out;
       padding: 16px;
-      .image,.data,.city{
+      cursor: pointer;
+
+      .city,
+      .data,
+      .image {
         padding: 0;
       }
-      .image{
+
+      .image {
         padding: 0 16px;
       }
 
-
-      img{
+      img {
         height: 100%;
         width: 100%;
         border-radius: 4px;
       }
-      p{
+
+      p {
         padding: 0;
         margin: 0;
-        &.price{
+
+        &.description,
+        &.location,
+        &.price {
+          text-decoration: none;
+          color: inherit;
+        }
+
+        &.description:hover,
+        &.location:hover,
+        &.price:hover {
+          text-decoration: none;
+          color: inherit;
+        }
+
+        &.price {
           padding-bottom: 32px;
           font-size: 24px;
         }
-        &.description{
+
+        &.description {
           font-size: 18px;
         }
-        &.location{
+
+        &.location {
           font-size: 12px;
         }
+      }
+      &:hover{
+        box-shadow: -1px 0px 8px 1px rgba(0, 0, 0, 0.1);
       }
     }
   }
 
   section.footer {}
 }
-
+a:-webkit-any-link, a:-webkit-any-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
 :focus {
   outline: -webkit-focus-ring-color auto 5px;
 }
-input:focus, button:focus{
+
+button:focus,
+input:focus {
   border-color: transparent!important;
   box-shadow: none!important;
 }
-.bgWhite{
+
+.bgWhite {
   background-color: white;
 }

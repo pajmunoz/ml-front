@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import Breadcrumbs from '../Breadcrums/breadcrumbs';
 
 class DetailView extends Component{
   render() {
@@ -9,9 +10,10 @@ class DetailView extends Component{
       item: "item"
     };
     return (<div className={style.container}>
+
       <div className={style.row}>
         <div className={style.col}>
-          <h1>Hello</h1>
+          <h1>{this.props.prodId}</h1>
 
         </div>
       </div>
