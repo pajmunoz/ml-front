@@ -9,15 +9,15 @@ import Detail from './components/Detail/detailView';
 
 
 class Index extends Component {
-  
+
 
   render() {
     return (<div className="App">
       <section className="header">
-        <Search/>
+        <Search />
       </section>
-      <Breadcrumbs></Breadcrumbs>
-      <Home></Home>
+      <Breadcrumbs />
+      <Home />
       <section className="footer"/>
     </div>);
   }
@@ -26,12 +26,9 @@ class Index extends Component {
 function Topic({match}) {
   return (<section className="container content">
 
-    <div className="row">
-      <div className="col">
-        <Breadcrumbs></Breadcrumbs>
+        <Breadcrumbs />
         <Detail prodId={`https://api.mercadolibre.com/items/` + match.params.id}></Detail>
-      </div>
-    </div>
+
   </section>);
 }
 
@@ -39,7 +36,7 @@ function AppRouter() {
   return (<Router>
     <div className="App">
       <section className="header">
-        <Search/>
+        <Search />
       </section>
       <Route path="/" exact="exact" component={Home}/>
       <Route path="/details/:id" component={Topic}/>

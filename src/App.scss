@@ -98,6 +98,48 @@ body {
         box-shadow: -1px 0px 8px 1px rgba(0, 0, 0, 0.1);
       }
     }
+    .detail{
+      p{
+        color: #333;
+        margin: 0;
+        &.selled{
+          font-size: 14px;
+          margin-bottom: 16px;
+        }
+        &.title{
+          font-size: 24px;
+          font-weight: 700;
+          padding-bottom: 32px;
+        }
+        &.price{
+          font-size: 46px;
+          padding-bottom: 32px;
+        }
+
+        &.descriptionTitle{
+          font-size: 28px;
+          color: #333;
+        }
+        &.descriptionText{}
+
+      }
+      button.buyBtn{
+        width: 100%;
+        background-color: #3483fa;
+        color:white;
+        border: none;
+        border-radius: 4px;
+        padding: 5px;
+      }
+    }
+    .col-right{
+      padding: 32px 32px 0 0;
+    }
+    .col-left{
+      img{
+        width: 100%;
+      }
+    }
   }
 
   section.footer {}
